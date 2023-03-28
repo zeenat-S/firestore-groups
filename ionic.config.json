@@ -1,0 +1,7 @@
+{
+  "name": "firestore-groups",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
