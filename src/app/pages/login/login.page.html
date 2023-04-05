@@ -1,0 +1,16 @@
+<ion-content>
+  <form [formGroup]="loginForm" style="margin-top: 200px; margin-left:100px; margin-right:100px;">
+    <h3>Login</h3>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-button shape="round" (click)="login()">
+      Login
+    </ion-button>
+  </form>
+</ion-content>
