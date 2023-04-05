@@ -47,19 +47,25 @@
       </ion-row>
     </form>
   </div>
-  <div *ngFor="let group of groups">
+  <div *ngIf="groups.length!==0">
     <ion-item>
       <ion-title>
         <h2 style="text-align: center;">Groups of {{currentUserEmail}}</h2>
       </ion-title>
     </ion-item>
+  </div>
+  <div *ngFor="let group of groups">
     <ul style="list-style: none;">
       <li>
         <ion-item>
           {{group.groupName}} :
-          <div *ngFor="let groupMember of group.members">
-            {{groupMember.name}} <br>
-          </div>
+          <ul style="list-style: none;">
+            <li>
+              <div *ngFor="let groupMember of group.members">
+                {{groupMember.name}}
+              </div>
+            </li>
+          </ul>
         </ion-item>
       </li>
     </ul>
